@@ -421,13 +421,10 @@ export async function updateBatchStatusInDb(
         updateData.last_location = location;
     }
 
-    if (latitude !== undefined && latitude !== null) {
-        updateData.latitude = latitude;
-    }
-
-    if (longitude !== undefined && longitude !== null) {
-        updateData.longitude = longitude;
-    }
+    // Always write lat/lng (even as null) to clear stale GPS from a previous step.
+    // If the caller has GPS it provides it; otherwise undefined → null clears the old position.
+    updateData.latitude = latitude ?? null;
+    updateData.longitude = longitude ?? null;
 
     if (anomalyReason !== undefined) {
         updateData.anomaly_reason = anomalyReason;

@@ -281,17 +281,12 @@ export function CbacAuthProvider({ children }: { children: ReactNode }) {
   const logout = useCallback(async () => {
     console.log("CbacAuthContext: Executing logout...");
     try {
-      await supabase.auth.signOut({ scope: 'local' });
-      console.log("Supabase signOut completed");
+      await supabase.auth.signOut();
     } catch (error: any) {
       console.error("Logout error:", error?.message);
     } finally {
-      // ALWAYS reset state and force hard redirect
       resetState();
-      console.log("State reset. Redirecting to /login...");
-      // Use absolute URL to ensure it works across different host setups if necessary
-      // but usually /login is fine. Let's stick to absolute relative.
-      window.location.href = window.location.origin + "/login";
+      window.location.href = "/login";
     }
   }, [supabase]);
 

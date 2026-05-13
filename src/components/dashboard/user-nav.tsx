@@ -21,33 +21,19 @@ import { useCbacAuth, type OrganizationType } from "@/contexts/cbac-auth-context
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { Moon, Sun, LogOut, Users, ChevronDown, Palette } from "lucide-react";
-import { useErrorHandler } from "@/hooks/use-error-handler";
 import { Badge } from "@/components/ui/badge";
 
 export function UserNav() {
   const { user, organizationType, isAdmin, logout } = useCbacAuth();
   const router = useRouter();
   const { setTheme } = useTheme();
-  const { showError } = useErrorHandler();
 
   const displayRole = isAdmin ? 'admin' : organizationType;
 
-  const handleLogout = async (e?: Event) => {
-    if (e && e.preventDefault) {
-      e.preventDefault();
-    }
-    
-    console.log("Logout initiated from UserNav");
+  const handleLogout = async () => {
     try {
-      if (typeof window !== 'undefined') {
-        // Direct feedback since logs might be missed
-        console.log("Attempting to call logout...");
-      }
       await logout();
     } catch (error) {
-      console.error("Logout failed:", error);
-      showError(error, "Logout");
-      // Fallback
       window.location.href = "/login";
     }
   };
@@ -145,7 +131,7 @@ export function UserNav() {
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem 
-          onSelect={handleLogout} 
+          onClick={handleLogout} 
           className="cursor-pointer text-red-600 dark:text-red-400 focus:text-red-600 focus:bg-red-500/10"
         >
           <LogOut className="mr-2 h-4 w-4" />

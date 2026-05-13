@@ -38,7 +38,18 @@ yarn-error.log*
 next-env.d.ts
 
 .genkit/*
-.env*
+
+# Environment files — never commit real secrets
+.env
+.env.local
+.env.production
+.env.development
+# Allow the example template (has placeholder values only, no real secrets)
+!.env.example
+
+# Generated files — not source code
+MediTrustChain_Project_Report.html
+/app.json
 
 # firebase
 firebase-debug.log

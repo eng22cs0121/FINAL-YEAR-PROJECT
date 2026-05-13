@@ -35,6 +35,9 @@ export default function PharmacyDashboard() {
   const [searchTerm, setSearchTerm] = useState('');
   const [isBlockchainSubmitting, setIsBlockchainSubmitting] = useState(false);
   const [blockchainTxHash, setBlockchainTxHash] = useState<string | null>(null);
+  const [isDemoMode, setIsDemoMode] = useState(false);
+  const [demoLat, setDemoLat] = useState("");
+  const [demoLng, setDemoLng] = useState("");
 
   // Blockchain hooks
   const { wallet, connectWallet, isLoading: isWalletLoading } = useBlockchain();
@@ -216,7 +219,12 @@ export default function PharmacyDashboard() {
 
         // Acquire GPS Coordinates for Pharmacy location
         let pharmacyCoords: { latitude?: number; longitude?: number } = {};
-        if (navigator.geolocation) {
+        if (isDemoMode) {
+          if (demoLat && demoLng) {
+            pharmacyCoords = { latitude: parseFloat(demoLat), longitude: parseFloat(demoLng) };
+            console.log("📍 [DEMO MODE] Override GPS:", pharmacyCoords);
+          }
+        } else if (navigator.geolocation) {
           try {
             const position = await new Promise<GeolocationPosition>((resolve, reject) => {
               navigator.geolocation.getCurrentPosition(resolve, reject, { timeout: 3000 });
@@ -398,6 +406,49 @@ export default function PharmacyDashboard() {
               </Button>
 
               <VerificationResultDisplay />
+
+              {/* DEMO MODE OVERRIDE */}
+              <div className="p-4 bg-muted/30 border border-dashed rounded-lg space-y-3">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <label className="text-sm font-bold text-primary flex items-center gap-2">
+                      <ShoppingCart className="h-4 w-4" />
+                      Presentation Demo Mode
+                    </label>
+                    <p className="text-xs text-muted-foreground">Override GPS instead of using laptop location</p>
+                  </div>
+                  <Button
+                    type="button"
+                    variant={isDemoMode ? "default" : "secondary"}
+                    size="sm"
+                    onClick={() => setIsDemoMode(!isDemoMode)}
+                  >
+                    {isDemoMode ? "Enabled" : "Disabled"}
+                  </Button>
+                </div>
+                {isDemoMode && (
+                  <div className="grid grid-cols-2 gap-4 pt-2">
+                    <div className="space-y-1">
+                      <label className="text-xs font-medium">Latitude</label>
+                      <Input
+                        placeholder="e.g. 17.3850"
+                        value={demoLat}
+                        onChange={(e) => setDemoLat(e.target.value)}
+                        className="h-8 text-sm"
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <label className="text-xs font-medium">Longitude</label>
+                      <Input
+                        placeholder="e.g. 78.4867"
+                        value={demoLng}
+                        onChange={(e) => setDemoLng(e.target.value)}
+                        className="h-8 text-sm"
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {verificationResult?.status === 'Verified' && (
                 <Button

@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ProtectedRoute } from "@/components/protected-route";
 import { useBatches, type Batch } from '@/contexts/batches-context';
 import { useToast } from '@/hooks/use-toast';
