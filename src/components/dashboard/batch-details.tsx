@@ -145,7 +145,7 @@ export function BatchDetails({ batch }: { batch: Batch }) {
     // Header
     doc.setFontSize(22);
     doc.setTextColor(112, 53, 219); // Primary purple
-    doc.text("MediTrustChain", 14, 20);
+    doc.text("MedAssure", 14, 20);
     
     doc.setFontSize(14);
     doc.setTextColor(100, 100, 100);
@@ -185,7 +185,7 @@ export function BatchDetails({ batch }: { batch: Batch }) {
       alternateRowStyles: { fillColor: [245, 245, 245] }
     });
 
-    doc.save(`MediTrustChain_Audit_${batch.id}.pdf`);
+    doc.save(`MedAssure_Audit_${batch.id}.pdf`);
     
     toast({
       title: "PDF Generated",

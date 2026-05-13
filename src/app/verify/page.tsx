@@ -235,7 +235,7 @@ export default function PatientVerifyPage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-white shadow-lg">
               <ShieldCheck className="h-5 w-5" />
             </div>
-            <span className="text-xl font-bold">MediTrustChain</span>
+            <span className="text-xl font-bold">MedAssure</span>
           </Link>
           <Button asChild variant="outline">
             <Link href="/login">Stakeholder Login</Link>

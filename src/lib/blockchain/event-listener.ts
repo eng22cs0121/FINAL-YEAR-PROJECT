@@ -7,7 +7,7 @@ import { CONTRACT_ADDRESS, isBlockchainConfigured } from './config';
 import { MEDITRUST_ABI } from './abi';
 
 /**
- * Event types emitted by MediTrustChainV2 smart contract
+ * Event types emitted by MedAssureV2 smart contract
  */
 export interface BatchCreatedEvent {
     batchId: bigint;

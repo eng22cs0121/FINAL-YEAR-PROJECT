@@ -105,7 +105,7 @@ export function RoleOnboardingModal() {
       default:
         return [
           {
-            title: "Welcome to MediTrustChain",
+            title: "Welcome to MedAssure",
             description: "The secure pharmaceutical supply chain platform.",
             icon: <ShieldCheck className="w-16 h-16 text-primary mb-4 mx-auto" />
           }

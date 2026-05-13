@@ -33,22 +33,20 @@ export function Logo({ className, iconOnly = false, size = 'md' }: LogoProps) {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          {/* Hexagon Base representing blocks */}
+          {/* Shield Base */}
           <path
-            d="M12 2L3 7v10l9 5 9-5V7l-9-5z"
+            d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
             fill="currentColor"
-            fillOpacity="0.1"
+            fillOpacity="0.15"
             stroke="currentColor"
           />
-          {/* Internal Chain/Network links */}
-          <path
-            d="M12 2v20M3 7l9 5M21 7l-9 5"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            opacity="0.8"
+          {/* Medical Cross */}
+          <path 
+            d="M9 12h6m-3-3v6" 
+            stroke="currentColor" 
+            strokeWidth="2.5" 
+            opacity="0.9" 
           />
-          {/* Center glowing node */}
-          <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.9" />
         </svg>
         
         {/* Subtle glow effect overlay */}
@@ -62,7 +60,7 @@ export function Logo({ className, iconOnly = false, size = 'md' }: LogoProps) {
             "group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent transition-all duration-300",
             text
           )}>
-            MediTrustChain
+            MedAssure
           </span>
           <span className="text-[9px] font-mono text-primary/80 tracking-[0.15em] uppercase mt-0.5">
             Decentralized Trust
@@ -83,19 +81,20 @@ export function LogoCompact({ className }: { className?: string }) {
           fill="none"
           className="h-5 w-5 text-primary group-hover:text-accent transition-colors"
           strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path
-            d="M12 2L3 7v10l9 5 9-5V7l-9-5z"
+            d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
             fill="currentColor"
-            fillOpacity="0.1"
+            fillOpacity="0.15"
             stroke="currentColor"
           />
-          <path d="M12 2v20M3 7l9 5M21 7l-9 5" stroke="currentColor" strokeWidth="1.5" opacity="0.8" />
-          <circle cx="12" cy="12" r="3" fill="currentColor" />
+          <path d="M9 12h6m-3-3v6" stroke="currentColor" strokeWidth="2.5" opacity="0.9" />
         </svg>
       </div>
       <span className="text-lg font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">
-        MediTrustChain
+        MedAssure
       </span>
     </div>
   );

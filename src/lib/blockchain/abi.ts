@@ -270,7 +270,7 @@ export const MEDITRUST_ABI = [
                        },
                        {
                            "indexed":  false,
-                           "internalType":  "enum MediTrustChainV2.BatchStatus",
+                           "internalType":  "enum MedAssureV2.BatchStatus",
                            "name":  "newStatus",
                            "type":  "uint8"
                        },
@@ -415,7 +415,7 @@ export const MEDITRUST_ABI = [
                        },
                        {
                            "indexed":  false,
-                           "internalType":  "enum MediTrustChainV2.UserRole",
+                           "internalType":  "enum MedAssureV2.UserRole",
                            "name":  "role",
                            "type":  "uint8"
                        },
@@ -591,7 +591,7 @@ export const MEDITRUST_ABI = [
                             "type":  "string"
                         },
                         {
-                            "internalType":  "enum MediTrustChainV2.BatchStatus",
+                            "internalType":  "enum MedAssureV2.BatchStatus",
                             "name":  "status",
                             "type":  "uint8"
                         },
@@ -620,7 +620,7 @@ export const MEDITRUST_ABI = [
         "name":  "batchStates",
         "outputs":  [
                         {
-                            "internalType":  "enum MediTrustChainV2.BatchStatus",
+                            "internalType":  "enum MedAssureV2.BatchStatus",
                             "name":  "status",
                             "type":  "uint8"
                         },
@@ -775,7 +775,7 @@ export const MEDITRUST_ABI = [
                                                    "type":  "bytes32"
                                                }
                                            ],
-                            "internalType":  "struct MediTrustChainV2.BatchCore",
+                            "internalType":  "struct MedAssureV2.BatchCore",
                             "name":  "",
                             "type":  "tuple"
                         }
@@ -841,14 +841,14 @@ export const MEDITRUST_ABI = [
                                                    "type":  "bytes32"
                                                }
                                            ],
-                            "internalType":  "struct MediTrustChainV2.BatchCore",
+                            "internalType":  "struct MedAssureV2.BatchCore",
                             "name":  "core",
                             "type":  "tuple"
                         },
                         {
                             "components":  [
                                                {
-                                                   "internalType":  "enum MediTrustChainV2.BatchStatus",
+                                                   "internalType":  "enum MedAssureV2.BatchStatus",
                                                    "name":  "status",
                                                    "type":  "uint8"
                                                },
@@ -883,7 +883,7 @@ export const MEDITRUST_ABI = [
                                                    "type":  "uint256"
                                                }
                                            ],
-                            "internalType":  "struct MediTrustChainV2.BatchState",
+                            "internalType":  "struct MedAssureV2.BatchState",
                             "name":  "state",
                             "type":  "tuple"
                         }
@@ -914,7 +914,7 @@ export const MEDITRUST_ABI = [
                                                    "type":  "string"
                                                },
                                                {
-                                                   "internalType":  "enum MediTrustChainV2.BatchStatus",
+                                                   "internalType":  "enum MedAssureV2.BatchStatus",
                                                    "name":  "status",
                                                    "type":  "uint8"
                                                },
@@ -929,7 +929,7 @@ export const MEDITRUST_ABI = [
                                                    "type":  "string"
                                                }
                                            ],
-                            "internalType":  "struct MediTrustChainV2.BatchHistory[]",
+                            "internalType":  "struct MedAssureV2.BatchHistory[]",
                             "name":  "",
                             "type":  "tuple[]"
                         }
@@ -969,7 +969,7 @@ export const MEDITRUST_ABI = [
                         {
                             "components":  [
                                                {
-                                                   "internalType":  "enum MediTrustChainV2.BatchStatus",
+                                                   "internalType":  "enum MedAssureV2.BatchStatus",
                                                    "name":  "status",
                                                    "type":  "uint8"
                                                },
@@ -1004,7 +1004,7 @@ export const MEDITRUST_ABI = [
                                                    "type":  "uint256"
                                                }
                                            ],
-                            "internalType":  "struct MediTrustChainV2.BatchState",
+                            "internalType":  "struct MedAssureV2.BatchState",
                             "name":  "",
                             "type":  "tuple"
                         }
@@ -1106,7 +1106,7 @@ export const MEDITRUST_ABI = [
     {
         "inputs":  [
                        {
-                           "internalType":  "enum MediTrustChainV2.UserRole",
+                           "internalType":  "enum MedAssureV2.UserRole",
                            "name":  "_role",
                            "type":  "uint8"
                        },
@@ -1203,7 +1203,7 @@ export const MEDITRUST_ABI = [
                            "type":  "uint256"
                        },
                        {
-                           "internalType":  "enum MediTrustChainV2.BatchStatus",
+                           "internalType":  "enum MedAssureV2.BatchStatus",
                            "name":  "_newStatus",
                            "type":  "uint8"
                        },
@@ -1236,7 +1236,7 @@ export const MEDITRUST_ABI = [
                             "type":  "address"
                         },
                         {
-                            "internalType":  "enum MediTrustChainV2.UserRole",
+                            "internalType":  "enum MedAssureV2.UserRole",
                             "name":  "role",
                             "type":  "uint8"
                         },
@@ -1441,7 +1441,7 @@ export const MEDITRUST_ABI = [
                         "type": "bool"
                     }
                 ],
-                "internalType": "struct MediTrustChainV2.DrugTemplate",
+                "internalType": "struct MedAssureV2.DrugTemplate",
                 "name": "",
                 "type": "tuple"
             }

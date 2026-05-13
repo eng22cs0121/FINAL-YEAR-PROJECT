@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="public/uploads/logo.png" alt="MediTrustChain Logo" width="120" height="120" onerror="this.style.display='none'"/>
+<img src="public/uploads/logo.png" alt="MedAssure Logo" width="120" height="120" onerror="this.style.display='none'"/>
 
-# 🏥 MediTrustChain
+# 🏥 MedAssure
 
 ### *Blockchain-Powered Pharmaceutical Supply Chain*
 
@@ -15,7 +15,7 @@
 
 **A final year B.E. Computer Science project** — a full-stack decentralised pharmaceutical supply chain platform that uses blockchain immutability, AI-powered anomaly detection, and real-time GPS tracking to eradicate counterfeit medicines.
 
-[🚀 Live Demo](#-quick-start) · [📱 Mobile App](FLUTTER-APP/) · [📄 Project Report](MediTrustChain_Project_Report.html) · [🔗 Smart Contract](https://sepolia.etherscan.io/address/0x1E60556dE1625bD468eCe9e45a421aFa4bb1F73D)
+[🚀 Live Demo](#-quick-start) · [📱 Mobile App](FLUTTER-APP/) · [📄 Project Report](MedAssure_Project_Report.html) · [🔗 Smart Contract](https://sepolia.etherscan.io/address/0x1E60556dE1625bD468eCe9e45a421aFa4bb1F73D)
 
 </div>
 
@@ -47,7 +47,7 @@
 ### 🔗 Blockchain Integrity
 - Immutable batch registry on **Ethereum Sepolia**
 - Every status change hashed on-chain
-- Smart contract: `MediTrustChainV2.sol`
+- Smart contract: `MedAssureV2.sol`
 - Verify transactions on Etherscan
 
 </td>
@@ -132,7 +132,7 @@
 ┌───────────▼────────────────────────────────────────────────────────┐
 │                      BLOCKCHAIN LAYER                               │
 │  ┌─────────────────────────────────────────────────────────────┐   │
-│  │  MediTrustChainV2.sol — Ethereum Sepolia Testnet            │   │
+│  │  MedAssureV2.sol — Ethereum Sepolia Testnet            │   │
 │  │  Contract: 0x1E60556dE1625bD468eCe9e45a421aFa4bb1F73D      │   │
 │  └─────────────────────────────────────────────────────────────┘   │
 └────────────────────────────────────────────────────────────────────┘
@@ -345,7 +345,7 @@ FINAL-YEAR-PROJECT/
 │   └── middleware.ts           # Edge Runtime CBAC guard
 ├── blockchain/
 │   ├── contracts/
-│   │   └── MediTrustChainV2.sol  # Main smart contract
+│   │   └── MedAssureV2.sol  # Main smart contract
 │   └── scripts/                   # Deploy & verify scripts
 ├── FLUTTER-APP/                # Patient mobile app (Flutter)
 ├── supabase/

@@ -19,12 +19,12 @@ import { CommandPalette } from '@/components/dashboard/command-palette';
 import '@/lib/clear-data'; // Import to expose clear functions to window
 
 export const metadata: Metadata = {
-  title: 'MediTrustChain | Trusted Pharmaceutical Supply Chain',
-  description: 'MediTrustChain - Blockchain-powered pharmaceutical supply chain security. Ensure drug authenticity, prevent counterfeits, and protect patients with immutable verification.',
-  keywords: ['pharmaceutical', 'supply chain', 'blockchain', 'traceability', 'MediTrustChain', 'healthcare'],
-  authors: [{ name: 'MediTrustChain' }],
+  title: 'MedAssure | Trusted Pharmaceutical Supply Chain',
+  description: 'MedAssure - Blockchain-powered pharmaceutical supply chain security. Ensure drug authenticity, prevent counterfeits, and protect patients with immutable verification.',
+  keywords: ['pharmaceutical', 'supply chain', 'blockchain', 'traceability', 'MedAssure', 'healthcare'],
+  authors: [{ name: 'MedAssure' }],
   openGraph: {
-    title: 'MediTrustChain | Trusted Pharmaceutical Supply Chain',
+    title: 'MedAssure | Trusted Pharmaceutical Supply Chain',
     description: 'Blockchain-powered pharmaceutical supply chain security for drug authenticity and patient safety.',
     type: 'website',
   },
@@ -42,7 +42,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <meta name="theme-color" content="#0ea5e9" />
+        <meta name="theme-color" content="#2563eb" />
       </head>
       <body className="font-body antialiased min-h-screen bg-background">
         <ErrorBoundary>

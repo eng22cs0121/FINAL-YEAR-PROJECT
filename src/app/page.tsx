@@ -161,15 +161,15 @@ export default function Home() {
                 variants={fadeInUp}
                 className="flex flex-col sm:flex-row gap-4 mt-6"
               >
-                <Button asChild size="lg" className="h-14 px-10 text-lg btn-premium">
+                <Button asChild size="lg" className="h-14 px-10 text-lg btn-premium group">
                   <Link href="/login" className="flex items-center gap-2">
                     Start Free Trial
-                    <ArrowRight className="h-5 w-5" />
+                    <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="h-14 px-10 text-lg border-2 border-primary/20 bg-white/50 backdrop-blur-sm hover:bg-white/80 hover:scale-105 transition-all duration-300 rounded-2xl">
+                <Button asChild variant="outline" size="lg" className="h-14 px-10 text-lg border-2 border-primary/20 bg-background/50 backdrop-blur-sm hover:bg-primary/5 hover:border-primary/40 hover:scale-[1.02] transition-all duration-300 rounded-2xl group">
                   <Link href="/about" className="flex items-center gap-2">
-                    <Play className="h-5 w-5" />
+                    <Play className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
                     Learn More
                   </Link>
                 </Button>
@@ -343,17 +343,18 @@ export default function Home() {
               ].map((feature, index) => (
                 <motion.div
                   key={index}
-                  className="card-interactive p-8"
+                  className="card-interactive p-8 group relative overflow-hidden"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
-                  <div className={`flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${feature.gradient} text-white shadow-lg mb-6`}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className={`relative z-10 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${feature.gradient} text-white shadow-lg mb-6 group-hover:scale-110 transition-transform duration-500`}>
                     <feature.icon className="h-7 w-7" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="relative z-10 text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                  <p className="relative z-10 text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </motion.div>
@@ -385,13 +386,13 @@ export default function Home() {
                   Join hundreds of pharmaceutical companies already protecting patients and combating counterfeits.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="h-14 px-10 text-lg bg-white text-primary hover:bg-white/90 shadow-2xl hover:scale-105 transition-all duration-300 rounded-xl font-semibold">
+                  <Button asChild size="lg" className="h-14 px-10 text-lg bg-white text-primary hover:bg-white/90 shadow-2xl hover:scale-[1.02] transition-all duration-300 rounded-xl font-semibold group">
                     <Link href="/login" className="flex items-center gap-2">
                       Get Started Free
-                      <ArrowRight className="h-5 w-5" />
+                      <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="h-14 px-10 text-lg border-2 border-white/40 bg-white/10 text-white hover:bg-white/20 hover:scale-105 transition-all duration-300 rounded-xl">
+                  <Button asChild variant="outline" size="lg" className="h-14 px-10 text-lg border-2 border-white/40 bg-white/10 text-white hover:bg-white/20 hover:scale-[1.02] transition-all duration-300 rounded-xl">
                     <Link href="/login">
                       Sign In
                     </Link>
@@ -454,7 +455,7 @@ export default function Home() {
           </div>
           <div className="mt-16 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2026 MediTrustChain. All rights reserved.
+              © 2026 MedAssure. All rights reserved.
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Shield className="h-4 w-4 text-primary" />

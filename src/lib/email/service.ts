@@ -29,8 +29,8 @@ class EmailService {
   private fromName: string;
 
   constructor() {
-    this.fromEmail = process.env.SMTP_FROM_EMAIL || 'noreply@meditrustchain.com';
-    this.fromName = process.env.SMTP_FROM_NAME || 'MediTrustChain';
+    this.fromEmail = process.env.SMTP_FROM_EMAIL || 'noreply@medassure.com';
+    this.fromName = process.env.SMTP_FROM_NAME || 'MedAssure';
     
     if (this.isConfigured()) {
       this.transporter = nodemailer.createTransport({
@@ -105,13 +105,13 @@ class EmailService {
   <div class="container">
     <div class="header">
       <h1 style="margin: 0;">🔔 Batch Status Update</h1>
-      <p style="margin: 10px 0 0 0; opacity: 0.9;">MediTrustChain Supply Chain Alert</p>
+      <p style="margin: 10px 0 0 0; opacity: 0.9;">MedAssure Supply Chain Alert</p>
     </div>
     
     <div class="content">
       <p>Hello ${data.recipientName},</p>
       
-      <p>A batch in the MediTrustChain supply chain has been updated:</p>
+      <p>A batch in the MedAssure supply chain has been updated:</p>
       
       <div class="info-row">
         <div class="info-label">Batch ID:</div>
@@ -151,7 +151,7 @@ class EmailService {
     </div>
     
     <div class="footer">
-      <p>This is an automated notification from MediTrustChain.</p>
+      <p>This is an automated notification from MedAssure.</p>
       <p>Blockchain-verified pharmaceutical supply chain tracking.</p>
       <p style="margin-top: 10px; font-size: 10px;">
         This transaction is recorded on the Ethereum blockchain and cannot be altered.
@@ -163,7 +163,7 @@ class EmailService {
     `;
 
     const text = `
-MediTrustChain - Batch Status Update
+MedAssure - Batch Status Update
 
 Hello ${data.recipientName},
 
@@ -179,13 +179,13 @@ Timestamp: ${new Date(data.timestamp).toLocaleString()}
 View more details in your dashboard: ${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:9002'}/dashboard
 
 ---
-This is an automated notification from MediTrustChain.
+This is an automated notification from MedAssure.
 Blockchain-verified pharmaceutical supply chain tracking.
     `;
 
     await this.sendEmail({
       to: data.to,
-      subject: `[MediTrustChain] Batch ${data.batchId} - Status Update: ${data.newStatus}`,
+      subject: `[MedAssure] Batch ${data.batchId} - Status Update: ${data.newStatus}`,
       html,
       text,
     });

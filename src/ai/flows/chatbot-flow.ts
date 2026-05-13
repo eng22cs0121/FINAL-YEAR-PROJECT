@@ -1,6 +1,6 @@
 'use server';
 /**
- * @fileOverview AI-powered chatbot flow for MediTrustChain assistant
+ * @fileOverview AI-powered chatbot flow for MedAssure assistant
  * Provides intelligent responses about supply chain, batches, and system features
  */
 
@@ -21,13 +21,13 @@ const ChatbotOutputSchema = z.object({
 });
 
 const chatbotPrompt = ai.definePrompt({
-  name: 'mediTrustChainChatbot',
+  name: 'MedAssureChatbot',
   input: { schema: ChatbotInputSchema },
   output: { schema: ChatbotOutputSchema },
-  prompt: `You are an intelligent AI assistant for MediTrustChain, a blockchain-powered pharmaceutical supply chain security platform.
+  prompt: `You are an intelligent AI assistant for MedAssure, a blockchain-powered pharmaceutical supply chain security platform.
 
 ## Your Role
-You help users understand and navigate the MediTrustChain system. You provide accurate, helpful information about:
+You help users understand and navigate the MedAssure system. You provide accurate, helpful information about:
 - Drug batch tracking and verification
 - Supply chain workflows
 - Blockchain security features
@@ -53,7 +53,7 @@ User: {{userMessage}}
 
 ## Response Guidelines
 1. **Be Concise**: Keep responses under 200 words unless detailed explanation is needed
-2. **Be Accurate**: Only provide information about features that exist in MediTrustChain
+2. **Be Accurate**: Only provide information about features that exist in MedAssure
 3. **Be Helpful**: Offer specific steps or navigation paths when relevant
 4. **Be Professional**: Maintain a friendly but professional tone
 5. **Be Action-Oriented**: Guide users to relevant dashboards or features

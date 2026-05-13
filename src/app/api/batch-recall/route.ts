@@ -56,7 +56,7 @@ export async function POST(req: Request) {
         console.log(`[EMAIL BROADCAST STARTED] Recall for ${batchId}`);
         
         await resend.emails.send({
-          from: 'MediTrustChain Alerts <alerts@resend.dev>', // Use verified domain in production
+          from: 'MedAssure Alerts <alerts@resend.dev>', // Use verified domain in production
           to: ['delivered@resend.dev'], // Send to stakeholders in production
           subject: `🚨 URGENT: BATCH RECALL - ${batchId}`,
           html: `
@@ -75,7 +75,7 @@ export async function POST(req: Request) {
                   <li>Remove from pharmacy shelves immediately</li>
                   <li>Quarantine any existing stock</li>
                 </ul>
-                <p style="color: #64748b; font-size: 14px; margin-top: 30px;">This is an automated message from the MediTrustChain system.</p>
+                <p style="color: #64748b; font-size: 14px; margin-top: 30px;">This is an automated message from the MedAssure system.</p>
               </div>
             </div>
           `

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Blockchain Verification Service for MediTrustChain
+ * Blockchain Verification Service for MedAssure
  * Handles patient-side drug authenticity verification with hash comparison
  * V2: Supports read-only verification without MetaMask for patients
  */

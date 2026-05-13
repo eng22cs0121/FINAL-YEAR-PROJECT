@@ -64,7 +64,7 @@ export function exportToPDF(data: ExportData): void {
     doc.setPage(i);
     doc.setFontSize(8);
     doc.text(
-      `Page ${i} of ${pageCount} | MediTrustChain | Generated: ${new Date().toLocaleString()}`,
+      `Page ${i} of ${pageCount} | MedAssure | Generated: ${new Date().toLocaleString()}`,
       14,
       doc.internal.pageSize.height - 10
     );

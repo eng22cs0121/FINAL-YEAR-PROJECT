@@ -41,7 +41,7 @@ class IPFSClient {
     const metadata = JSON.stringify({
       name: file.name,
       keyvalues: {
-        uploadedBy: 'MediTrustChain',
+        uploadedBy: 'MedAssure',
         timestamp: new Date().toISOString(),
       },
     });

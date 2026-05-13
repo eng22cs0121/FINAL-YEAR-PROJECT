@@ -63,7 +63,7 @@ export default function PrintQRPage() {
 
         <div className="max-w-2xl mx-auto border-2 border-black p-8 rounded-xl print:border-none print:p-0">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold mb-2">MediTrustChain</h1>
+            <h1 className="text-3xl font-bold mb-2">MedAssure</h1>
             <p className="text-gray-600">Verified Pharmaceutical Batch</p>
           </div>
 
@@ -103,7 +103,7 @@ export default function PrintQRPage() {
           </div>
 
           <div className="mt-12 text-center text-sm text-gray-500 border-t pt-4">
-            <p>Scan this QR code using the MediTrustChain mobile app to verify authenticity and track supply chain history.</p>
+            <p>Scan this QR code using the MedAssure mobile app to verify authenticity and track supply chain history.</p>
             {batch.dataHash && (
               <p className="mt-2 text-xs font-mono break-all text-gray-400">
                 Data Hash: {batch.dataHash}

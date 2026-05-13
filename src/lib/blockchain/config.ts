@@ -1,4 +1,4 @@
-// Blockchain Configuration for MediTrustChain
+// Blockchain Configuration for MedAssure
 // Supports Ethereum Sepolia and Polygon Amoy testnets
 
 export const SUPPORTED_CHAINS = {
@@ -60,7 +60,7 @@ export const getChainConfig = (chainKey?: keyof typeof SUPPORTED_CHAINS) => {
 };
 
 // User roles enum matching the smart contract
-// CRITICAL: Order must match MediTrustChainV2.sol UserRole enum exactly!
+// CRITICAL: Order must match MedAssureV2.sol UserRole enum exactly!
 export enum UserRole {
   MANUFACTURER = 0,
   REGULATOR = 1,

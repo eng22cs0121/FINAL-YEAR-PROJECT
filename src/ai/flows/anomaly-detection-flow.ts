@@ -29,7 +29,7 @@ const singleBatchPrompt = ai.definePrompt({
   name: 'singleBatchAnomalyPrompt',
   input: { schema: AnomalyDetectionInputSchema },
   output: { schema: AnomalyDetectionOutputSchema },
-  prompt: `You are an expert AI pharmaceutical supply chain auditor for MediTrustChain.
+  prompt: `You are an expert AI pharmaceutical supply chain auditor for MedAssure.
 Your role is to detect anomalies, fraud patterns, and supply chain risks in drug batch data.
 You MUST also provide a clear APPROVAL RECOMMENDATION to help the Regulator decide.
 
@@ -108,7 +108,7 @@ const multiBatchPrompt = ai.definePrompt({
   name: 'multiBatchAnomalyPrompt',
   input: { schema: BatchAnalysisInputSchema },
   output: { schema: BatchAnalysisOutputSchema },
-  prompt: `You are an expert AI auditor for MediTrustChain pharmaceutical supply chain security.
+  prompt: `You are an expert AI auditor for MedAssure pharmaceutical supply chain security.
 Analyze ALL batches provided and detect anomalies across the entire supply chain.
 
 ## Analysis Rules (Apply to each batch)
